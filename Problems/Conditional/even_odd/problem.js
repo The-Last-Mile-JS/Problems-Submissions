@@ -9,12 +9,7 @@ Output: "Even" / "Odd"
 
 function even_odd(num){
     // Your solution
-    if (num % 2 === 0){
-        return "Even";
-    }
-    else {
-        return "Odd";
-    }
+
 }
 
 module.exports = {
