@@ -7,7 +7,7 @@ Output: The subtraction of two integers
 
 function subtract(num1, num2){
     // Your solution
-    return num1-num2
+
 }
 
 // Do not delete
