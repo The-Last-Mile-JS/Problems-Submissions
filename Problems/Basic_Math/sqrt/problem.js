@@ -8,7 +8,12 @@ Output: The square root of the integer
 
 function squareRoot(num){
     // Your solution
-
+    if (num < 0){
+        return null;
+    }
+    else {
+        return Math.sqrt(num);
+    }
 }
 
 // Do not delete
