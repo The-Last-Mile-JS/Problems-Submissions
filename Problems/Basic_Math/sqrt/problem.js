@@ -2,7 +2,7 @@
 Create a function that finds the square root of an integer. Return null if the
 square root of the integer is not a real number.
 
-Input: An integers
+Input: An integer
 Output: The square root of the integer
 */
 
