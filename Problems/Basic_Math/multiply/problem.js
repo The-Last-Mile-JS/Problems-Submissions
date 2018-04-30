@@ -7,7 +7,7 @@ Output: The sum of two integers
 
 function multiply(num1, num2){
     // Your solution
-
+    return num1*num2;
 }
 
 // Do not delete
