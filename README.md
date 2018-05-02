@@ -1,7 +1,8 @@
 # Problems Submissions Repo
-A repository hosted an offline Git server for:
-1. An individual student pulls the coding problems and pushes his codes on his branch.
-2. The admin to add or change the coding problems for the students.
+![System](https://img.shields.io/badge/system-git-blue.svg?logo=github)</br></br>
+A repository hosted on an offline Git server for:
+1. an individual student pulls the coding problems and pushes his codes on his branch.
+2. the admin to add or change the coding problems for the students.
 
 ## Installation (Admin Hosting the Repo on the server)
 Assuming that you (admin) wants to host this repository on a server called `servername` that you have ssh access to, and you want to store the repo under the `Desktop/git_server` directory.
