@@ -8,9 +8,7 @@ A repository hosted on an offline Git server for:
 Assuming that you (admin) wants to host this repository on a server called `servername` that you have ssh access to, and you want to store the repo under the `Desktop/git_server` directory.
 ```console
 $ git clone https://github.com/The-Last-Mile-JS/Problems-Submissions.git # clone the repository
-
 $ git clone --bare Problems-Submissions Problems-Submissions.git  # create a bare repository
-
 $ scp -r Problems-Submissions.git username@servername:Desktop/git_server # putting the bare repo to the server
 ```
 
@@ -19,28 +17,37 @@ $ scp -r Problems-Submissions.git username@servername:Desktop/git_server # putti
 ```console
 $ git clone username@servername:Desktop/git_server/Problems-submissions.git
 $ cd Problems-submissions
-... (actions of adding/modifying/deleting questions)
+
+... # actions of adding/modifying/deleting questions
+
 $ git add <file>
 $ git commit -m “[add/modify/delete] Chapter_Name/Question_Name”
 $ git push origin master
 ```
 
-### Instructions for Students Pulling the Questions and Pushing the Solutions to Repo (Served on GitHub)
+### [Student] Creating Branch and Submitting Solution for the First Time
+```console
+$ git clone username@servername:Desktop/git_server/Problems-submissions.git
+$ cd Problems-submissions
+$ git checkout -b NAME # creating and switching to personal branch
 
-*First-time Submitting Solutions:*
-1. `git clone https://github.com/The-Last-Mile-JS/Problems-Submissions`
-2. `git checkout -b NAME`</br>
-…
-3.  `git add <file>`
-4.  `git commit -m “NAME solves Chapter_Name/Question_Name”`
-5.  `git push origin NAME`
+... # actions of solving a problem
 
-*Subsequent submission (After having a NAME branch):*
-1. `git clone https://github.com/The-Last-Mile-JS/Problems-Submissions`
-2. `git fetch origin NAME`
-3. `git checkout NAME`
-4. `git merge master`</br>
-…
-5.  `git add <file>`
-6.  `git commit -m “NAME solves Chapter_Name/Question_Name”`
-7.  `git push origin NAME`
+$ git add <file>
+$ git commit -m “NAME solves Chapter_Name/Question_Name”
+$ git push origin NAME
+```
+### [Student] Submitting Solutions for Subsequent Times
+```console
+$ git clone username@servername:Desktop/git_server/Problems-submissions.git
+$ cd Problems-submissions
+$ git fetch origin NAME # fetching personal branch that contains previously submitted solution
+$ git checkout NAME # switching to personal branch
+$ git merge master # include new problems pushed by instructor
+
+... # actions of solving a problem
+
+$ git add <file>
+$ git commit -m “NAME solves Chapter_Name/Question_Name”
+$ git push origin NAME
+```
