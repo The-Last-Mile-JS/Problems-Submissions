@@ -9,6 +9,7 @@ Assuming that you (admin) wants to host this repository on a server called `serv
 ```console
 $ git clone https://github.com/The-Last-Mile-JS/Problems-Submissions.git # clone the repository
 $ git clone --bare Problems-Submissions Problems-Submissions.git  # create a bare repository
+$ mkdir git_server
 $ scp -r Problems-Submissions.git username@servername:Desktop/git_server # putting the bare repo to the server
 ```
 
